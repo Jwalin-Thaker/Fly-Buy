@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+
+    "name": "FlyBuy Script",
+    "description": "This extension will capture Products for you from Amazon",
+    "version": "0.1",
+
+    "browser_action": {
+        "default_icon": "./res/icon.png",
+        "default_popup": "./src/popup.html"
+    },
+    "permissions": [
+        "activeTab"
+    ]
+}
