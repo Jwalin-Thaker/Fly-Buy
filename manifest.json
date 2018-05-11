@@ -4,12 +4,33 @@
     "name": "FlyBuy Script",
     "description": "This extension will capture Products for you from Amazon",
     "version": "0.1",
-
     "browser_action": {
-        "default_icon": "./res/icon.png",
+        "default_icon": {
+            "16": "res/get_started16.png",
+            "32": "res/get_started32.png",
+            "48": "res/get_started48.png",
+            "128": "res/get_started128.png"
+        },
+        "default_title": "Chrome Extension test",
         "default_popup": "./src/popup.html"
     },
+    "background": {
+        "scripts": ["./js/background.js"],
+        "persistent": false
+    },
     "permissions": [
-        "activeTab"
-    ]
+        "activeTab",
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "declarativeContent",
+        "storage"
+    ],
+    "icons": {
+        "16": "res/get_started16.png",
+        "32": "res/get_started32.png",
+        "48": "res/get_started48.png",
+        "128": "res/get_started128.png"
+    }
+
 }

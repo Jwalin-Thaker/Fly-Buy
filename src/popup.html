@@ -4,18 +4,43 @@
 <head>
     <title>Fly Buy</title>
     <script src="../js/popup.js"></script>
+    <style>
+        body {
+            min-width: 230px;
+            min-height: 200px;
+            font-size: 1em;
+        }
+        
+        #heading {
+            background: black;
+            width: 70%;
+            border-radius: 20px;
+        }
+        
+        #context {
+            background: #34495e;
+            padding: 2%;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
     <center>
-        <h3>FLY-BUY</h3>
-        <p><b>Email ID (linked to Amazon)</b></p>
-        <input type="email" placeholder="Enter email here" />
-        <p><b>Select Products to Buy</b></p>
-        <p><b>Sale Time</b></p>
-        <input type="datetime" placeholder="Select Time of Sale" />
-        <br><br>
-        <button id="go" onclick="myfunc()">Submit!</button>
+        <div id="context">
+            <h2 id="heading">FLY-BUY</h2>
+            <p><b>-------------<br>Disclaimer<br>-------------<br>"Stay signed into your Amazon account"</b></p>
+            <p><b>Select Products to Buy</b></p>
+            <select id="choice">
+                <option value="" selected disabled hidden>Choose Product here</option>
+                <option value="1">Redmi Note 5 Pro (Black, 64GB)</option>
+                <option value="2">Redmi Note 5 Pro (Rose Gold, 64GB)</option>
+                <option value="3">Redmi Note 5 Pro (Pink, 32GB)</option>
+            </select>
+            <br><br>
+            <button id="go">Save & Submit</button>
+            <br><br>
+        </div>
     </center>
 </body>
 
