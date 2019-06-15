@@ -1,36 +1,44 @@
 {
-    "manifest_version": 2,
-
-    "name": "FlyBuy Script",
-    "description": "This extension will capture Products for you from Amazon",
-    "version": "0.1",
-    "browser_action": {
-        "default_icon": {
-            "16": "res/get_started16.png",
-            "32": "res/get_started32.png",
-            "48": "res/get_started48.png",
-            "128": "res/get_started128.png"
-        },
-        "default_title": "Chrome Extension test",
-        "default_popup": "./src/popup.html"
+  "manifest_version": 2,
+  "name": "Fly-Buy Script",
+  "description": "This extension will capture products for you, from Amazon",
+  "version": "0.1",
+  "page_action": {
+    "default_icon": {
+      "16": "res/get_started16.png",
+      "32": "res/get_started32.png",
+      "48": "res/get_started48.png",
+      "128": "res/get_started128.png"
     },
-    "background": {
-        "scripts": ["./js/background.js"],
-        "persistent": false
-    },
-    "permissions": [
-        "activeTab",
-        "tabs",
-        "http://*/*",
-        "https://*/*",
-        "declarativeContent",
-        "storage"
+    "default_title": "Chrome Extension",
+    "default_popup": "./src/popup.html"
+  },
+  "options_page": "./src/options.html",
+  "background": {
+    "scripts": [
+      "./js/background.js"
     ],
-    "icons": {
-        "16": "res/get_started16.png",
-        "32": "res/get_started32.png",
-        "48": "res/get_started48.png",
-        "128": "res/get_started128.png"
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.in/*"
+      ],
+      "js": ["./js/content.js"]
     }
-
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://www.amazon.in/*",
+    "storage",
+    "notifications"
+  ],
+  "icons": {
+    "16": "res/get_started16.png",
+    "32": "res/get_started32.png",
+    "48": "res/get_started48.png",
+    "128": "res/get_started128.png"
+  }
 }

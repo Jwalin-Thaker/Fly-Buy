@@ -1,0 +1,17 @@
+body {
+  min-width: 230px;
+  min-height: 200px;
+  font-size: 1em;
+}
+
+#heading {
+  background: black;
+  width: 70%;
+  border-radius: 20px;
+}
+
+#context {
+  background: #34495e;
+  padding: 3%;
+  color: white;
+}

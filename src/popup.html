@@ -2,46 +2,38 @@
 <html>
 
 <head>
-    <title>Fly Buy</title>
-    <script src="../js/popup.js"></script>
-    <style>
-        body {
-            min-width: 230px;
-            min-height: 200px;
-            font-size: 1em;
-        }
-        
-        #heading {
-            background: black;
-            width: 70%;
-            border-radius: 20px;
-        }
-        
-        #context {
-            background: #34495e;
-            padding: 2%;
-            color: white;
-        }
-    </style>
+  <title>Fly Buy</title>
+  <script src="../js/popup.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/popoup-styles.css">
 </head>
 
 <body>
-    <center>
-        <div id="context">
-            <h2 id="heading">FLY-BUY</h2>
-            <p><b>-------------<br>Disclaimer<br>-------------<br>"Stay signed into your Amazon account"</b></p>
-            <p><b>Select Products to Buy</b></p>
-            <select id="choice">
-                <option value="" selected disabled hidden>Choose Product here</option>
-                <option value="1">Redmi Note 5 Pro (Black, 64GB)</option>
-                <option value="2">Redmi Note 5 Pro (Rose Gold, 64GB)</option>
-                <option value="3">Redmi Note 5 Pro (Pink, 32GB)</option>
-            </select>
-            <br><br>
-            <button id="go">Save & Submit</button>
-            <br><br>
-        </div>
-    </center>
+  <center>
+    <div id="context">
+      <h2 id="heading">FLY-BUY</h2>
+      <hr>
+      <p id="disclaimer"><b>* Note</b>: Stay signed into your Amazon account for proper <b><i>add-to-cart</i></b>
+        functionality</p>
+      <hr>
+      <div id="productSaleCard">
+        <p><b>Select Sale Product</b></p>
+        <select id="productChoiceList">
+          <option value="0" selected disabled hidden>Choose Product here</option>
+          <option value="1">Redmi Note 5 Pro (Black, 64GB)</option>
+          <option value="2">Redmi Note 5 Pro (Rose Gold, 64GB)</option>
+          <option value="3">Redmi Note 5 Pro (Pink, 32GB)</option>
+        </select>
+      </div>
+      <div id="productSaleTime">
+        <p><b>Select Sale Time</b></p>
+        <input id="saleTime" type="datetime-local" />
+      </div>
+      <p></p>
+      <button id="saveProductButton">Save</button>
+      <button id="surfNow">Go Now</button>
+      <br><br>
+    </div>
+  </center>
 </body>
 
 </html>
